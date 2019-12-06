@@ -1,0 +1,30 @@
+// .navbar-light .navbar-nav .nav-link,
+// .active {
+//     color: white;
+// }
+
+// ul.nav.navbar-nav.mr-auto>li.nav-item.active>a {
+//     color: white;
+// }
+
+.bg-light {
+    //background-color: #007affc9 !important;
+    background-color: white !important;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.satellite-img {
+    max-width: 100%;
+    max-width: 100%;
+}
