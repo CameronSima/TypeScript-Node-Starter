@@ -1,12 +1,12 @@
 {
-    "name": "express-typescript-starter",
+    "name": "express-typescript-typeorm-starter",
     "version": "0.1.0",
     "description": "A starting point for Node.js express apps with TypeScript",
     "repository": {
         "type": "git",
         "url": "https://github.com/Microsoft/TypeScript-Node-Starter"
     },
-    "author": "Bowden Kelly",
+    "author": "cameron Sima",
     "license": "MIT",
     "scripts": {
         "start": "npm run serve",
