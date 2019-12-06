@@ -14,7 +14,6 @@ const prod = ENVIRONMENT === "production" // Anything else is treated as 'dev'
 
 export const SESSION_SECRET = process.env["SESSION_SECRET"]
 
-export const SENDGRID_INCOMING_SECRET = process.env["SENDGRID_INCOMING_SECRET"]
 export const SENDGRID_USER = process.env["SENDGRID_USER"]
 export const SENDGRID_PASSWORD = process.env["SENDGRID_PASSWORD"]
 

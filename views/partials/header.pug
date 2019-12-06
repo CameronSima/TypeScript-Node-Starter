@@ -1,7 +1,8 @@
 nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
   .container
     a.navbar-brand(href='/')
-      | Telecaster
+      i.fa.fa-cube
+      | Project name
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='.navbar-collapse')
       span.navbar-toggler-icon
 
@@ -10,13 +11,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
       ul.nav.navbar-nav.mr-auto
         li.nav-item(class=(title === 'Home') ? 'active' : undefined)
           a.nav-link(href='/') Home
+        li.nav-item(class=(title === 'API Examples') ? 'active' : undefined)
+          a.nav-link(href='/api') API Examples
         li.nav-item(class=(title === 'Contact') ? 'active' : undefined)
           a.nav-link(href='/contact') Contact
-        
-        if user && user.isAdmin
-          li.nav-item(class=(title === 'Admin') ? 'active': undefined)
-            a.nav-link(href='/admin') Admin
-
       ul.nav.navbar-nav
         if !user
           li.nav-item(class=(title === 'Login') ? 'active' : undefined)
@@ -26,8 +24,11 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
         else
           li.nav-item.dropdown(class=(title === 'Account Management') ? 'active' : undefined)
             a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown')
-              user.email
-              span= user.email
+              if user.profile.picture
+                img(src=user.profile.picture, alt=(user.profile.name || user.email || user.id))
+              else
+                img(src=user.gravatar(60), alt=(user.profile.name || user.email || user.id))
+              span= user.profile.name || user.email || user.id
               i.caret
             ul.dropdown-menu
               li.nav-item

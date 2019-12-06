@@ -33,6 +33,5 @@ describe("POST /contact", () => {
                 done()
             })
             .expect(302)
-
     })
 })
